@@ -91,8 +91,7 @@ export class GameManager extends Component {
 
         if (reward === 'END') {
             this.gameEnded = true;
-            await sheepScript.playDownAnimation();
-
+            // await sheepScript.playDownAnimation();
             // END後其他小羊立即顯示剩餘獎勵，不播放星星動畫
             const remainingSheep = this.sheepArray.filter(s => s !== sheep && !s.getComponent('Sheep')?.isClicked);
             remainingSheep.forEach((s) => {
